@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { CustomCursor } from "@/components/custom-cursor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,7 +40,6 @@ export default function RootLayout({
           <div className="relative z-0 flex flex-col min-h-screen">
             {children}
           </div>
-          <CustomCursor />
         </ThemeProvider>
       </body>
     </html>
