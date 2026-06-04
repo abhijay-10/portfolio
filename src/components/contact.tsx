@@ -86,13 +86,13 @@ export function Contact() {
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:contact@abhijay.ai" className="flex items-center gap-4 group">
+              <a href="mailto:parasharabhijay@gmail.com" className="flex items-center gap-4 group">
                 <div className="p-4 glass-card group-hover:bg-primary/10 transition-colors">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="font-medium group-hover:text-primary transition-colors">contact@abhijay.ai</div>
+                  <div className="font-medium group-hover:text-primary transition-colors">parasharabhijay@gmail.com</div>
                 </div>
               </a>
 

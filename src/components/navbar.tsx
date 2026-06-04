@@ -30,11 +30,14 @@ export function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    const targetId = href.replace("#", "");
-    const elem = document.getElementById(targetId);
-    if (elem) {
-      elem.scrollIntoView({ behavior: "smooth" });
-    }
+    
+    setTimeout(() => {
+      const targetId = href.replace("#", "");
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
