@@ -31,10 +31,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Global Premium Background Mesh */}
-          <div className="fixed inset-0 z-[-1] pointer-events-none bg-black">
-            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(0,102,255,0.1)_0%,transparent_50%)] animate-mesh" />
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.1)_0%,transparent_30%)] animate-mesh" style={{ animationDelay: '-5s' }} />
+          {/* Global Premium Deep Purple Background */}
+          <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#0a0014] overflow-hidden">
+            {/* Massive Bottom Glow */}
+            <div className="absolute bottom-[-20%] left-1/2 -translate-x-1/2 w-[150%] h-[60%] bg-[radial-gradient(ellipse_at_bottom,rgba(168,85,247,0.4)_0%,rgba(76,29,149,0.2)_40%,transparent_70%)] blur-[80px] pointer-events-none" />
+            
+            {/* Subtle top mesh for texture */}
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_0%,rgba(168,85,247,0.1)_0%,transparent_50%)] animate-mesh pointer-events-none" />
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.1)_0%,transparent_30%)] animate-mesh pointer-events-none" style={{ animationDelay: '-5s' }} />
           </div>
           
           <div className="relative z-0 flex flex-col min-h-screen">

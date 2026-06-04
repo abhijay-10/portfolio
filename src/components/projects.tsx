@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Retrivio AI",
     description: "A Multiple PDF RAG Bot for accurate answers to student's queries of their pdfs uploaded and can ask about that.",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800",
     technologies: ["RAG", "LLMs", "PDF Parsing"],
     features: ["Multiple PDFs", "Accurate Answers", "Student Focus", "Query Handling"],
     githubLink: "https://github.com/abhijay-10",
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "AI Study Buddy",
     description: "A scalable AI chatbot using LangChain, FastAPI, and Streamlit with Gemini model integration for real-world use cases and answers.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
     technologies: ["LangChain", "FastAPI", "Streamlit", "Gemini API"],
     features: ["Real-world Use Cases", "Scalable", "FastAPI Backend", "Gemini Integration"],
     githubLink: "https://github.com/abhijay-10/AI-Study-Buddy",
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Intelligence That Never Sleeps",
     description: "Built a real-time driver drowsiness detection system using OpenCV and MediaPipe with Streamlit for monitoring and eye tracking.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800",
     technologies: ["OpenCV", "MediaPipe", "Streamlit", "Computer Vision"],
     features: ["Driver Drowsiness", "Real-time Monitoring", "Eye Tracking", "Edge AI"],
     githubLink: "https://github.com/abhijay-10/Drowsy-Detection",
@@ -46,10 +46,19 @@ const projects = [
   {
     title: "Gesture Talk",
     description: "Developed a real-time sign language recognition system using OpenCV and MediaPipe for accurate gesture detection.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     technologies: ["OpenCV", "MediaPipe", "Computer Vision", "Python"],
     features: ["Sign Language", "Real-time Processing", "Gesture Detection", "High Accuracy"],
     githubLink: "https://github.com/abhijay-10/Sign-Language-ASL",
+    liveLink: "#"
+  },
+  {
+    title: "AI Doctor",
+    description: "Developed an AI-powered healthcare system for patient health assessment, multi-disease prediction, and intelligent symptom analysis using Machine Learning and predictive analytics techniques.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
+    technologies: ["Machine Learning", "Predictive Analytics", "AI", "Healthcare"],
+    features: ["Patient Details", "Automated System", "Symptoms Checker", "Multi-Disease Prediction"],
+    githubLink: "https://github.com/baljinder-26/Ai-doctor",
     liveLink: "#"
   }
 ];
@@ -90,8 +99,8 @@ export function Projects() {
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               onMouseMove={handleMouseMove}
@@ -107,8 +116,13 @@ export function Projects() {
                 </div>
               </div>
 
-              {/* Image Container with "Acceleration" Hover Effect */}
-              <div className="relative h-64 w-full overflow-hidden bg-black">
+              {/* Image Container with "Acceleration" Hover Effect and Load Animation */}
+              <motion.div 
+                initial={{ filter: "blur(10px)", scale: 1.1 }}
+                whileInView={{ filter: "blur(0px)", scale: 1 }}
+                transition={{ duration: 0.7, delay: idx * 0.1 + 0.3 }}
+                className="relative h-64 w-full overflow-hidden bg-black"
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -137,13 +151,13 @@ export function Projects() {
                     <Link
                       href={project.liveLink}
                       target="_blank"
-                      className="p-3 bg-primary/90 border border-blue-400 text-white hover:bg-blue-600 transition-all duration-300 uppercase text-xs font-bold tracking-widest flex items-center shadow-[0_0_15px_rgba(0,102,255,0.5)]"
+                      className="p-3 bg-primary/90 border border-cyan-400 text-white hover:bg-cyan-600 transition-all duration-300 uppercase text-xs font-bold tracking-widest flex items-center shadow-[0_0_15px_rgba(6,182,212,0.5)]"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
                     </Link>
                   )}
                 </div>
-              </div>
+              </motion.div>
 
               <div className="p-8 flex flex-col flex-grow bg-black/40 backdrop-blur-sm z-10 relative">
                 <h3 className="text-2xl font-black mb-3 text-white tracking-tight">{project.title}</h3>

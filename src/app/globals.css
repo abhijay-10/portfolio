@@ -17,9 +17,9 @@
 
 :root {
   /* Matte Black & Gunmetal Dark Theme Only */
-  --background: #000000;
+  --background: #0a0014;
   --foreground: #e2e8f0;
-  --primary: #0066ff; /* Electric Blue Accent */
+  --primary: #06b6d4; /* Premium Cyan Accent */
   --primary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: #94a3b8;
@@ -28,9 +28,9 @@
 
 .dark {
   /* Enforce exact same dark theme if .dark is toggled */
-  --background: #000000;
+  --background: #0a0014;
   --foreground: #e2e8f0;
-  --primary: #0066ff;
+  --primary: #06b6d4;
   --primary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: #94a3b8;
@@ -116,7 +116,7 @@ html {
   left: var(--x, 50%);
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;

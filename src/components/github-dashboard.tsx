@@ -17,7 +17,7 @@ export function GithubDashboard() {
   // Mock data for the dashboard. In a real app, you would fetch this from the GitHub API.
   const stats = [
     { label: "Total Commits", value: "400+", icon: <GitCommit className="w-6 h-6 text-primary" /> },
-    { label: "Repositories", value: "8", icon: <GitFork className="w-6 h-6 text-white" /> }
+    { label: "Repositories", value: "11+", icon: <GitFork className="w-6 h-6 text-white" /> }
   ];
 
   const languages = [

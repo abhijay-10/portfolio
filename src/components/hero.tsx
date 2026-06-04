@@ -88,10 +88,10 @@ export function Hero() {
           
           {/* Profile Image - Metallic Ring */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.1 }}
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#2a2a2a] shadow-[0_0_30px_rgba(0,102,255,0.2)] mb-8 relative group"
+            initial={{ scale: 0.5, opacity: 0, y: 50, rotate: -15 }}
+            animate={{ scale: 1, opacity: 1, y: 0, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.1, duration: 1 }}
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#2a2a2a] shadow-[0_0_30px_rgba(6,182,212,0.2)] mb-8 relative group"
           >
             <div className="absolute inset-0 rounded-full border border-white/10 z-20 pointer-events-none" />
             <Image
@@ -106,46 +106,46 @@ export function Hero() {
 
           {/* Ignition Status Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, scale: 0.8, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 text-xs font-bold uppercase tracking-widest text-gray-300 mb-8 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
           >
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-3 animate-pulse shadow-[0_0_10px_rgba(0,102,255,0.8)]"></span>
+            <span className="flex h-2 w-2 rounded-full bg-primary mr-3 animate-pulse shadow-[0_0_10px_rgba(6,182,212,0.8)]"></span>
             System Online
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-white drop-shadow-xl"
           >
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-emerald-400 to-teal-500">Abhijay Parashar</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-cyan-400 to-blue-500">Abhijay Parashar</span>
           </motion.h1>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-xl md:text-2xl text-gray-400 mb-8 font-semibold tracking-wide uppercase"
           >
             AI Engineer <span className="text-[#2a2a2a]">|</span> GenAI Developer <span className="text-[#2a2a2a]">|</span> Agentic AI
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed"
           >
             Engineering intelligent systems, autonomous agents, and production-ready GenAI solutions to accelerate complex problem solving and automate workflows with high-performance precision.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap justify-center gap-4"
           >
             <Link
