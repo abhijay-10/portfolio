@@ -5,7 +5,7 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    degree: "B.Tech Computer Science & Engineering | CGPA: 8.42",
+    degree: "B.Tech Computer Science & Engineering | CGPA: 8.57",
     institution: "DAV Institute of Engineering and Technology, Jalandhar",
     year: "09/2022 – 2026",
     coursework: ["Pursuing Bachelor's in CSE with a strong focus on core computer science subjects."]
