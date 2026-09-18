@@ -7,7 +7,7 @@ const experiences = [
   {
     role: "Generative AI Intern",
     organization: "CoderRoots",
-    duration: "Jan 2026 - Present",
+    duration: "Jan 2026 - Jul 2026",
     responsibilities: [
       "Worked on Generative AI applications using LLMs, LangChain, Prompt Engineering and Python to build AI-powered solutions, chatbots, and automation features.",
       "Collaborated on developing scalable and user-friendly AI functionalities."
